@@ -1,0 +1,454 @@
+/* CSS RESET */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000000;
+}
+
+/* FONT IMPORT */
+@font-face {
+  font-family: 'harry-potter';
+  src: url('fonts/harry-potter-font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'magic';
+  src: url('fonts/hogwarts-legacy-1.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* END FONT IMPORT */
+
+.slider-container {
+  padding-bottom: 20px; /* Adjust the value according to your preference */
+  padding-top: 10px;
+}
+
+/* HERO VIDEO CONTAINER AND MOBILE STYLING */
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio, adjust based on the aspect ratio of your video */
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Target screens with a maximum width of 767px (mobile devices) */
+@media screen and (max-width: 989px) {
+  .video-container {
+    padding-bottom: 100%; /* 1:1 aspect ratio for mobile devices */
+  }
+}
+
+/* Target screens with a minimum width of 768px (tablets and larger) */
+@media screen and (min-width: 990px) {
+  .video-container {
+    padding-bottom: 56.25%; /* 16:9 aspect ratio for larger screens */
+  }
+}
+
+/* VIDEO TRANSITIONS */
+.video-container:after {
+  background: linear-gradient(180deg, rgba(23, 30, 29, 0), #171e1d);
+  bottom: 0;
+  content: '';
+  height: 75px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.background-container:before {
+  background: linear-gradient(0deg, rgba(23, 30, 29, 0), #171e1d);
+  content: '';
+  height: 75px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+.background-container {
+  /* Set the desired height for the container */
+  height: 100%;
+
+  /* Set the background image */
+  background-image: url('images/bg-bottom-m.jpg'); /* Replace with the actual path to your background image */
+
+  /* Set the background size and position */
+  background-size: cover; /* This will resize the background image to cover the entire container */
+  background-position: center center; /* This will center the background image in the container */
+
+  /* Optional: set a background color as a fallback */
+  background-color: #000; /* Replace with your desired fallback color */
+
+  padding-top: 20px;
+  position: relative;
+}
+
+.posters-slider,
+.slider-container {
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+// Custom sizes for demo
+/* .posters-slider {
+  @media (orientation: portrait) {
+    --posters-slider-width: 68vw;
+    --posters-slider-height: calc(68vw * 1.48);
+  }
+  @media (orientation: landscape) {
+    --posters-slider-width: calc(80vh / 1.48);
+    --posters-slider-height: 80vh;
+  }
+} */
+
+/* PROFILE SECTION AND STYLING */
+
+.profile {
+  position: absolute;
+  top: 65%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+}
+
+.header {
+  font-family: 'harry-potter', cursive;
+  font-size: 3rem; /* Increase the font size here */
+  text-align: center;
+  word-wrap: break-word;
+  font-weight: 100;
+  color: #ae9519;
+  line-height: 0.75;
+  text-shadow: whitesmoke;
+}
+
+.subtitle {
+  font-family: 'harry-potter', cursive;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 100;
+}
+
+.smaller {
+  font-size: 1.5rem;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+/* GAME STATS ROW */
+.game-info-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+
+  padding: 10px;
+  flex-wrap: wrap;
+  font-family: 'magic', cursive;
+}
+
+.graphics {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px;
+  flex-wrap: wrap;
+  font-family: 'magic', cursive;
+}
+
+.info {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: top;
+  width: 100%;
+  height: 50px;
+
+  padding: 10px;
+  flex-wrap: wrap;
+  font-family: 'magic', cursive;
+}
+
+/* PROGRESS STYLING */
+.progress-container {
+  position: relative;
+  margin: 0 5px;
+  height: 160px;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.outer {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  position: absolute;
+
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.inner {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim 2s linear forwards;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes anim {
+  100% {
+    stroke-dashoffset: 165;
+  }
+}
+
+.progress-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+}
+
+#number {
+  position: relative;
+  font-size: 40px;
+  font-weight: 600;
+  color: #fffffff2;
+}
+
+/* CASPIAN HEADSHOT */
+body .game-info-container .caspian-profile-container {
+  flex: 1;
+  margin: 0 5px;
+  width: 200px;
+  height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background-image: url(images/caspain-894x1496.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.caspian-profile-info {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+}
+
+.caspian-profile-name {
+  text-align: center;
+}
+
+/* POSTER FLIP CARD STYLING */
+.slide-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.quest-list-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  transform: translateY(100%);
+  transition: transform 1s;
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+  z-index: 10; /* Make sure the quest list is above the poster image */
+
+  /* frosted glass */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Adjust the alpha value for the desired level of transparency */
+  backdrop-filter: blur(20px) brightness(1.5); /* Adjust the blur and brightness values as needed */
+  -webkit-backdrop-filter: blur(5px) brightness(0.9); /* For Safari and older Chrome versions */
+  /* border-radius: 5px; */ /* Optional: to round the edges */
+}
+
+.quest-toggle {
+  font-family: 'magic', cursive;
+  margin-top: 10px; /* Adjust the margin as needed */
+  cursor: pointer;
+  opacity: 0.8;
+  background: linear-gradient(90deg, rgb(216, 205, 142), #ffd900e1);
+  color: rgb(0, 0, 0);
+  font-size: 15px; /* Adjust the font size as needed */
+  padding: 5px 10px; /* Adjust the padding as needed */
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+
+  /* transition effect */
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.hide-quests {
+  opacity: 0.7;
+}
+
+.quest-list {
+  list-style: none; /* remove the default bullet points */
+  padding: 10px; /* remove default padding */
+  height: 100%;
+  width: 100%;
+  margin: 1rem 0; /* add some margin around the list */
+  max-width: 90%; /* set a maximum width for the list */
+  text-align: left; /* center the text of list items */
+
+  /*  overflow: hidden; */ /* hide overflowing content, useful when you have rounded corners */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.quest-list .quest-item {
+  display: block;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    rgb(161, 154, 116),
+    #ffd9009f
+  ); /* adjust the color as needed */
+  color: #ffffff;
+
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  text-align: left;
+  user-select: none; /* disable text selection */
+}
+
+.quest-item:active {
+  transform: scale(0.96);
+}
+
+.quest-item.completed {
+  background: linear-gradient(90deg, #193fb9, #1c2b5c);
+  color: #ffffffa1;
+  opacity: 0.8;
+}
+
+/* Position the "Show Quests" button */
+.show-quests {
+  position: absolute;
+  bottom: 15px; /* Adjust the position as needed */
+  right: 15px;
+  transform: translateY(0%);
+  opacity: 0.8;
+}
+
+/* Position the "Hide Quests" button */
+.hide-quests {
+  position: absolute;
+  bottom: 15px; /* Adjust the position as needed */
+  right: 15px;
+  transform: translateY(100%);
+  opacity: 0.6;
+}
+
+/* Show the "Hide Quests" button when the quest list is open */
+.quest-list-container.open .hide-quests {
+  transform: translateY(0%);
+  opacity: 0.6;
+}
+
+/* Hide the "Show Quests" button when the quest list is open */
+.quest-list-container.open .show-quests {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.quest-list-container.open {
+  transform: translateY(0);
+}
+
+/* END OF QUEST LIST STUFF */
+
+/* SPARKLE ANIMATION CANVAS */
+#sparkle-canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}

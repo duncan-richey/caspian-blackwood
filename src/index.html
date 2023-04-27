@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posters Slider</title>
+
+    <script
+      src="https://kit.fontawesome.com/c4aa86512f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <canvas
+      id="sparkle-canvas"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        pointer-events: none;
+      "
+    ></canvas>
+
+    <div id="Hero" class="video-container">
+      <video autoplay muted loop playsinline>
+        <source src="video/hero.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="volume-control"></div>
+
+      <div class="profile">
+        <h1 class="header">
+          Caspian Blackwood <br />
+          <span class="subtitle"
+            ><span class="no-wrap smaller">and the</span> Chamber
+            <span class="smaller">of</span> Bisexual Erasure</span
+          >
+        </h1>
+      </div>
+    </div>
+
+    <div class="background-container">
+      <audio id="background-music" autoplay loop unmuted>
+        <source src="audio/hedwigs-theme.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <div class="game-info-container">
+        <div class="graphics">
+          <div class="progress-container">
+            <div class="outer">
+              <div class="inner">
+                <div id="number"></div>
+              </div>
+            </div>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              width="160px"
+              height="160px"
+            >
+              <defs>
+                <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#193fb9" />
+                  <stop offset="100%" stop-color="#1c2b5c" />
+                </linearGradient>
+              </defs>
+              <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+            </svg>
+          </div>
+
+          <div class="caspian-profile-container"></div>
+        </div>
+
+        <div class="info">
+          <div class="progress-text">
+            <span class="text">Main Quests Completed</span>
+          </div>
+
+          <div class="caspian-profile-info">
+            <div class="caspian-profile-name">Caspian Blackwood</div>
+            <div class="caspian-profile-level">Level 22</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="app">
+        <!-- Posters slider -->
+        <div class="posters-slider slider-container">
+          <div class="posters-slider">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <div class="poster">
+                      <img
+                        data-swiper-parallax-scale="1.1"
+                        src="./images/card-frame-img.webp"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="quest-toggle-container">
+                      <button class="quest-toggle show-quests">Quests</button>
+                    </div>
+
+                    <div class="quest-list-container">
+                      <ul class="quest-list">
+                        <li class="quest-item">Quest 1</li>
+                        <li class="quest-item">Quest 2</li>
+                        <li class="quest-item">Quest 3</li>
+                        <!-- Add more quests as needed -->
+                      </ul>
+                      <button class="quest-toggle hide-quests">
+                        Hide Quests
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <div class="poster">
+                      <img
+                        data-swiper-parallax-scale="1.1"
+                        src="./images/card-frame-img.webp"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="quest-toggle-container">
+                      <button class="quest-toggle show-quests">Quests</button>
+                    </div>
+
+                    <div class="quest-list-container">
+                      <ul class="quest-list">
+                        <li class="quest-item">Welcome to Hogwarts</li>
+                        <li class="quest-item">Charms Class</li>
+                        <li class="quest-item">
+                          Defense Against the Dark Arts Class
+                        </li>
+                        <li class="quest-item">Weasley After Class</li>
+                        <li class="quest-item">Professor Ronen's Assignment</li>
+                        <li class="quest-item">Welcome to Hogsmeade</li>
+                        <!-- Add more quests as needed -->
+                      </ul>
+                      <button class="quest-toggle hide-quests">
+                        Hide Quests
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <div class="poster">
+                      <img
+                        data-swiper-parallax-scale="1.1"
+                        src="./images/card-frame-img.webp"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="quest-toggle-container">
+                      <button class="quest-toggle show-quests">Quests</button>
+                    </div>
+
+                    <div class="quest-list-container">
+                      <ul class="quest-list">
+                        <li class="quest-item">The Locket’s Secret</li>
+                        <li class="quest-item">
+                          Professor Hecat’s Assignment 1
+                        </li>
+                        <li class="quest-item">
+                          Secrets of the Restricted Section
+                        </li>
+                        <li class="quest-item">Tomes and Tribulations</li>
+
+                        <!-- Add more quests as needed -->
+                      </ul>
+                      <button class="quest-toggle hide-quests">
+                        Hide Quests
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- end of slide divs -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+    <script src="music.js"></script>
+    <script src="sparkle.js"></script>
+    <script src="progress.js"></script>
+  </body>
+</html>
