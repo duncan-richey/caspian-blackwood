@@ -49,10 +49,10 @@
     </div>
 
     <div class="background-container">
-      <audio id="background-music" autoplay loop unmuted>
+     <!--  <audio id="background-music" autoplay loop unmuted>
         <source src="audio/hedwigs-theme.mp3" type="audio/mp3" />
         Your browser does not support the audio element.
-      </audio>
+      </audio> -->
 
       <div class="game-info-container">
         <div class="graphics">
@@ -75,7 +75,7 @@
                   <stop offset="100%" stop-color="#1c2b5c" />
                 </linearGradient>
               </defs>
-              <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+              <circle class="progress-circle" cx="80" cy="80" r="70" stroke-linecap="round" />
             </svg>
           </div>
 
@@ -100,26 +100,24 @@
           <div class="posters-slider">
             <div class="swiper">
               <div class="swiper-wrapper">
+                <!-- BEGIN CARDS -->
                 <div class="swiper-slide">
                   <div class="slide-content">
                     <div class="poster">
                       <img
                         data-swiper-parallax-scale="1.1"
-                        src="./images/card-frame-img.webp"
+                        src="./images/1-path.png"
                         alt=""
                       />
                     </div>
 
                     <div class="quest-toggle-container">
-                      <button class="quest-toggle show-quests">Quests</button>
+                      <button class="quest-toggle show-quests">Prologue</button>
                     </div>
 
                     <div class="quest-list-container">
                       <ul class="quest-list">
-                        <li class="quest-item">Quest 1</li>
-                        <li class="quest-item">Quest 2</li>
-                        <li class="quest-item">Quest 3</li>
-                        <!-- Add more quests as needed -->
+                        <li class="quest-item">The Path to Hogwarts</li>
                       </ul>
                       <button class="quest-toggle hide-quests">
                         Hide Quests
@@ -133,13 +131,13 @@
                     <div class="poster">
                       <img
                         data-swiper-parallax-scale="1.1"
-                        src="./images/card-frame-img.webp"
+                        src="./images/2-welcome-to-hogwart.webp"
                         alt=""
                       />
                     </div>
 
                     <div class="quest-toggle-container">
-                      <button class="quest-toggle show-quests">Quests</button>
+                      <button class="quest-toggle show-quests">Attend Your First Day at Hogwarts</button>
                     </div>
 
                     <div class="quest-list-container">
@@ -166,13 +164,13 @@
                     <div class="poster">
                       <img
                         data-swiper-parallax-scale="1.1"
-                        src="./images/card-frame-img.webp"
+                        src="./images/3-secrets-restricted.webp"
                         alt=""
                       />
                     </div>
 
                     <div class="quest-toggle-container">
-                      <button class="quest-toggle show-quests">Quests</button>
+                      <button class="quest-toggle show-quests">Find the Secret in the Restricted Section</button>
                     </div>
 
                     <div class="quest-list-container">
@@ -181,12 +179,304 @@
                         <li class="quest-item">
                           Professor Hecat’s Assignment 1
                         </li>
+                        <li class="quest-item">Crossed Wands: Round 1</li>
+                        <li class="quest-item">Crossed Wands: Round 2</li>
+                        <li class="quest-item">Spell Combination Practice 1</li>
                         <li class="quest-item">
                           Secrets of the Restricted Section
                         </li>
                         <li class="quest-item">Tomes and Tribulations</li>
 
                         <!-- Add more quests as needed -->
+                      </ul>
+                      <button class="quest-toggle hide-quests">
+                        Hide Quests
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <div class="poster">
+                      <img
+                        data-swiper-parallax-scale="1.1"
+                        src="./images/4-live-as-a-student.webp"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="quest-toggle-container">
+                      <button class="quest-toggle show-quests">Live as a Student Until Professor Fig Returns</button>
+                    </div>
+
+                    <div class="quest-list-container">
+                      <ul class="quest-list">
+                        <li class="quest-item">Herbology Class</li>
+                        <li class="quest-item">Potions Class</li>
+                        <li class="quest-item">The Girl from Uagadou</li>
+                        <li class="quest-item">Trials of Merlin</li>
+                        <!-- Add more quests as needed -->
+                      </ul>
+                      <button class="quest-toggle hide-quests">
+                        Hide Quests
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <div class="poster">
+                      <img
+                        data-swiper-parallax-scale="1.1"
+                        src="./images/5-tell-professor-fig.webp"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="quest-toggle-container">
+                      <button class="quest-toggle show-quests">Tell Professor Fig About the Map Chamber</button>
+                    </div>
+
+                    <div class="quest-list-container">
+                      <ul class="quest-list">
+                        
+                        <li class="quest-item">Ollivander’s Heirloom</li>
+                        <li class="quest-item">Professor Hecat’s Assignment 2</li>
+                        <li class="quest-item">Jackdaw’s Rest</li>
+                        <!-- Add more quests as needed -->
+                      </ul>
+                      <button class="quest-toggle hide-quests">
+                        Hide Quests
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <div class="poster">
+                      <img
+                        data-swiper-parallax-scale="1.1"
+                        src="./images/6-first-keep.webp"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="quest-toggle-container">
+                      <button class="quest-toggle show-quests">Complete the First Keeper Trial</button>
+                    </div>
+
+                    <div class="quest-list-container">
+                      <ul class="quest-list">
+                        <li class="quest-item">Flying Class</li>
+                        <li class="quest-item">In the Shadow of the Undercroft</li>
+                        <li class="quest-item">The Room of Requirement</li>
+                        <!-- Add more quests as needed -->
+                      </ul>
+                      <button class="quest-toggle hide-quests">
+                        Hide Quests
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <div class="poster">
+                      <img
+                        data-swiper-parallax-scale="1.1"
+                        src="./images/7-improve-your-magic.webp"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="quest-toggle-container">
+                      <button class="quest-toggle show-quests">Improve Your Magical Abilities to Access the Next Trial</button>
+                    </div>
+
+                    <div class="quest-list-container">
+                      <ul class="quest-list">
+                        <li class="quest-item">The Map Chamber</li>
+                        
+                        <!-- Add more quests as needed -->
+                      </ul>
+                      <button class="quest-toggle hide-quests">
+                        Hide Quests
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <div class="poster">
+                      <img
+                        data-swiper-parallax-scale="1.1"
+                        src="./images/8-search-for-next.webp"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="quest-toggle-container">
+                      <button class="quest-toggle show-quests">Prepare For Your Search For the Next Keeper</button>
+                    </div>
+
+                    <div class="quest-list-container">
+                      <ul class="quest-list">
+                        <li class="quest-item">Percival Rackham’s Trial</li>
+                        
+                        <!-- Add more quests as needed -->
+                      </ul>
+                      <button class="quest-toggle hide-quests">
+                        Hide Quests
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <div class="poster">
+                      <img
+                        data-swiper-parallax-scale="1.1"
+                        src="./images/9-search-for-final.webp"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="quest-toggle-container">
+                      <button class="quest-toggle show-quests">Prepare For Your Search For the Final Keeper</button>
+                    </div>
+
+                    <div class="quest-list-container">
+                      <ul class="quest-list">
+                        <li class="quest-item">Beasts Class</li>
+                        <li class="quest-item">The Caretaker’s Lunar Lament</li>
+                        <li class="quest-item">The Helm of Urtkot</li>
+                        <li class="quest-item">In the Shadow of the Estate</li>
+                        <li class="quest-item">The Elf, The Nab-Sack, and the Loom</li>
+                        <li class="quest-item">Astronomy Class</li>
+                        <li class="quest-item">Professor Garlick’s Assignment 1</li>
+                        <li class="quest-item">The High Keep</li>
+                        <li class="quest-item">Back on the Path</li>
+                        <li class="quest-item">Charles Rookwood’s Trial</li>
+                        <!-- Add more quests as needed -->
+                      </ul>
+                      <button class="quest-toggle hide-quests">
+                        Hide Quests
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <div class="poster">
+                      <img
+                        data-swiper-parallax-scale="1.1"
+                        src="./images/10-stop-rookwood.webp"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="quest-toggle-container">
+                      <button class="quest-toggle show-quests">Stop Ranrok and Rookwood</button>
+                    </div>
+
+                    <div class="quest-list-container">
+                      <ul class="quest-list">
+                        <li class="quest-item">Fire and Vice</li>
+                        <li class="quest-item">Professor Weasley’s Assignment</li>
+                        <li class="quest-item">In the Shadow of the Mine</li>
+                        <li class="quest-item">It’s All Gobbledegook</li>
+                        <li class="quest-item">The Headmistress Speaks</li>
+                        <li class="quest-item">The Polyjuice Plot</li>
+                        <li class="quest-item">Niamh Fitzgerald’s Trial</li>
+                        <!-- Add more quests as needed -->
+                      </ul>
+                      <button class="quest-toggle hide-quests">
+                        Hide Quests
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <div class="poster">
+                      <img
+                        data-swiper-parallax-scale="1.1"
+                        src="./images/11-prepare-for-owls.webp"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="quest-toggle-container">
+                      <button class="quest-toggle show-quests">Prepare for Your O.W.L.S.</button>
+                    </div>
+
+                    <div class="quest-list-container">
+                      <ul class="quest-list">
+                        <li class="quest-item">In the Shadow of the Mountain</li>
+                        <li class="quest-item">Lodgok's Loyalty</li>
+                        <li class="quest-item">San Bakar's Trial</li>
+                        <!-- Add more quests as needed -->
+                      </ul>
+                      <button class="quest-toggle hide-quests">
+                        Hide Quests
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <div class="poster">
+                      <img
+                        data-swiper-parallax-scale="1.1"
+                        src="./images/12-stop-rankrok.webp"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="quest-toggle-container">
+                      <button class="quest-toggle show-quests">Stop Ranrok</button>
+                    </div>
+
+                    <div class="quest-list-container">
+                      <ul class="quest-list">
+                        <li class="quest-item">Wand Mastery</li>
+                        <li class="quest-item">The Final Repository</li>
+                        
+                      </ul>
+                      <button class="quest-toggle hide-quests">
+                        Hide Quests
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <div class="poster">
+                      <img
+                        data-swiper-parallax-scale="1.1"
+                        src="./images/13-post-story-quests.webp"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="quest-toggle-container">
+                      <button class="quest-toggle show-quests">Post-Story Quests</button>
+                    </div>
+
+                    <div class="quest-list-container">
+                      <ul class="quest-list">
+                        <li class="quest-item">Weasley's Watchful Eye</li>
+                        <li class="quest-item">The House Cup</li>
+                       <!-- Add more quests as needed -->
                       </ul>
                       <button class="quest-toggle hide-quests">
                         Hide Quests
@@ -204,7 +494,6 @@
     </div>
 
     <script type="module" src="/main.js"></script>
-    <script src="music.js"></script>
     <script src="sparkle.js"></script>
     <script src="progress.js"></script>
   </body>
