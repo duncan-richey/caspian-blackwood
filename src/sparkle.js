@@ -150,3 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* window.addEventListener('load', updateVideoSource);
 window.addEventListener('resize', updateVideoSource); */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const backgroundMusic = document.getElementById("background-music");
+  backgroundMusic.muted = false;
+});
