@@ -1,7 +1,7 @@
 /**
  * import main Posters Slider function
  */
-import createPostersSlider from './posters-slider';
+import createPostersSlider from './posters-slider.js';
 /**
  * import Posters Slider styles
  */
@@ -9,7 +9,7 @@ import './posters-slider.scss';
 /**
  * Custom local styles
  */
-import './main.scss';
+import "./main.scss";
 
 /**
  * Posters Slider element
