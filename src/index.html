@@ -35,9 +35,7 @@
         Your browser does not support the video tag.
       </video>
 
-      <div class="volume-control"></div>
-
-      <div class="profile">
+      <div class="adventure-title">
         <h1 class="header">
           Caspian Blackwood <br />
           <span class="subtitle"
@@ -49,50 +47,50 @@
     </div>
 
     <div class="background-container">
-     <audio id="background-music" autoplay loop>
+     <!-- <audio id="background-music" autoplay loop>
         <source src="audio/hedwigs-theme.mp3" type="audio/mp3" />
         Your browser does not support the audio element.
-      </audio>
+      </audio> -->
 
-      <div class="game-info-container">
-        <div class="graphics">
-          <div class="progress-container">
+      <div class="game-info-grid-container">
+        
+        <div class="progress-container">
             <div class="outer">
-              <div class="inner">
-                <div id="number"></div>
+              <div class="outer-inner-wrapper">
+                <div class="inner">
+                  <div id="number"></div>
+                </div>
+
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1" viewBox="0 0 160 160"                   >
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#193fb9" />
+                    <stop offset="100%" stop-color="#1c2b5c" />
+                  </linearGradient>
+                </defs>
+                <circle class="progress-circle" cx="80" cy="80" r="72" stroke-linecap="round" />
+                </svg>
               </div>
             </div>
 
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              version="1.1"
-              width="160px"
-              height="160px"
-            >
-              <defs>
-                <linearGradient id="GradientColor">
-                  <stop offset="0%" stop-color="#193fb9" />
-                  <stop offset="100%" stop-color="#1c2b5c" />
-                </linearGradient>
-              </defs>
-              <circle class="progress-circle" cx="80" cy="80" r="70" stroke-linecap="round" />
-            </svg>
-          </div>
+            
+        </div>
+       
+        <div class="progress-text">Main Story Quests Completed</div>
 
-          <div class="caspian-profile-container"></div>
+        <div class="profile-picture">
+            <img src="images/caspain-894x1496.png" alt="" />
         </div>
 
-        <div class="info">
-          <div class="progress-text">
-            <span class="text">Main Quests Completed</span>
-          </div>
-
-          <div class="caspian-profile-info">
-            <div class="caspian-profile-name">Caspian Blackwood</div>
-            <div class="caspian-profile-level">Level 22</div>
-          </div>
+        <div class="profile-info">
+          <div class="caspian-profile-name">Caspian Blackwood</div>
+          <div class="caspian-profile-level">Level 22</div>
         </div>
+
       </div>
+    
 
       <div id="app">
         <!-- Posters slider -->
