@@ -1,15 +1,15 @@
 /**
  * import main Posters Slider function
  */
-import createPostersSlider from './posters-slider';
+import createPostersSlider from '..//styles/posters-slider';
 /**
  * import Posters Slider styles
  */
-import './posters-slider.scss';
+import '..//styles/posters-slider';
 /**
  * Custom local styles
  */
-import './main.scss';
+import '..//styles/main.scss';
 
 /**
  * Posters Slider element

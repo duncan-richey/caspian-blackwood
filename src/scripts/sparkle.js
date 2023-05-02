@@ -254,13 +254,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const offset = circumference - (progressPercentage / 100) * circumference;
     
       progressCircle.setAttribute("stroke-dashoffset", offset);
-      /* if (progressPercentage === 0) progressCircle.setAttribute("stroke-dashoffset", circumference);
- */
-      if (progressPercentage === 0) {
-        progressCircle.style.stroke = 'transparent';
-      } else {
-        progressCircle.style.stroke = 'url(#GradientColor)';
-      }
+      if (progressPercentage === 0) progressCircle.setAttribute("stroke-dashoffset", circumference);
+
+      
     }
   
     // Add an event listener for each quest item to toggle the 'completed' class when clicked
