@@ -253,10 +253,11 @@ body {
 .progress-text {
   grid-area: progress-text;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #ffffff;
   text-align: center;
+  font-family: 'magic', cursive;
 }
 
 /* RIGHT SIDE OF GRID */
@@ -266,6 +267,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 2px;
+  margin-bottom: 5%;
 }
 
 .profile-picture img {
@@ -278,7 +280,25 @@ body {
   grid-area: profile-info;
   text-align: center;
   color: white;
+  font-size: 1.5rem;
+  font-family: 'magic', cursive;
 }
+
+.profile-level {
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+
+  background-color: #ae95194e;
+  border-color: rgba(255, 217, 0, 0.523);
+  border-style: solid;
+  padding: 1%;
+  border-width: 2px;
+  border-radius: 15px;
+}
+
 
 /* For better responsiveness */
 @media (max-width: 600px) {
