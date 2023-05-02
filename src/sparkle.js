@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* VIDEO CHANGES DEPENDING ON SCREEN SIZE */
 
-function updateVideoSource() {
+/* function updateVideoSource() {
   const videoElement = document.querySelector('.video-container video');
   const sourceElement = document.querySelector('.video-container video source');
   
@@ -146,7 +146,7 @@ function updateVideoSource() {
   }
   
   videoElement.load();
-}
+} */
 
 window.addEventListener('load', updateVideoSource);
 window.addEventListener('resize', updateVideoSource);
