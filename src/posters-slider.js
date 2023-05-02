@@ -68,10 +68,3 @@ export default function createPostersSlider(el) {
   return postersSwiper;
 }
 
-const questItems = document.querySelectorAll('.quest-item');
-
-questItems.forEach((item) => {
-  item.addEventListener('click', () => {
-    item.classList.toggle('completed');
-  });
-});
