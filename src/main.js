@@ -2,6 +2,8 @@
  * import main Posters Slider function
  */
 import createPostersSlider from './posters-slider.js';
+
+
 /**
  * import Posters Slider styles
  */
