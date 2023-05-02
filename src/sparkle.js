@@ -107,17 +107,39 @@ document.addEventListener('DOMContentLoaded', () => {
   // Add an event listener for each quest item to toggle the 'completed' class when clicked
   // and call the updateProgressCircle function
   document.querySelectorAll('.quest-item').forEach((questItem) => {
-    questItem.addEventListener('click', () => {
+    questItem.addEventListener('click', async () => {
       questItem.classList.toggle('completed');
       
       const progressPercentage = calculateProgressPercentage();
       updateProgressCircle(progressPercentage);
-
+  
       if (questItem.classList.contains('completed')) {
         addParticle(null, questItem);
       }
+  
+      // Send the updated status to the backend
+      const id = questItem.dataset.id; // Assuming each quest item has a "data-id" attribute containing its ID
+      const completed = questItem.classList.contains('completed');
+  
+      try {
+        const response = await fetch(`/api/questItems/${id}`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ completed: completed }),
+        });
+  
+        if (!response.ok) {
+          throw new Error(`HTTP error ${response.status}`);
+        }
+      } catch (err) {
+        console.error('Failed to update quest item:', err);
+      }
     });
   });
+  
+  
 
   // Initialize the progress circle
   const initialProgressPercentage = calculateProgressPercentage();

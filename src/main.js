@@ -33,3 +33,19 @@ createPostersSlider(sliderEl);
 
 // Assuming 'quest' is the DOM element representing the quest item
 quest.classList.add('completed');
+
+
+function fetchQuestItems() {
+    fetch('/api/quest-items')
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.error('Error fetching quest items:', error));
+  }
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Your existing code here
+  
+    fetchQuestItems();
+  });
+  
