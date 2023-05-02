@@ -148,5 +148,5 @@ document.addEventListener('DOMContentLoaded', () => {
   videoElement.load();
 } */
 
-window.addEventListener('load', updateVideoSource);
-window.addEventListener('resize', updateVideoSource);
+/* window.addEventListener('load', updateVideoSource);
+window.addEventListener('resize', updateVideoSource); */
