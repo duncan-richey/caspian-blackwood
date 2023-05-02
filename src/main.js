@@ -3,6 +3,12 @@
  */
 import createPostersSlider from './posters-slider.js';
 
+/**
+ * import all other functions
+ */
+
+import './sparkle.js';
+
 
 /**
  * import Posters Slider styles
